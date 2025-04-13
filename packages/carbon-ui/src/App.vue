@@ -18,9 +18,6 @@ import { type MenuOption } from '@/components/Dropdown/types'
 import { createMessage, closeAll } from '@/components/Message/method'
 import Switch from '@/components/Switch/Switch.vue'
 import svgIcon from './assets/icons/apple.svg?raw'
-// import eslintConfig from '@repo/eslint-config/vue-internal'
-
-// console.log(eslintConfig, 'eslintConfig')
 
 // import { currentThemeColors } from '@/index.ts'
 
