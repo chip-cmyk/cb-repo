@@ -9,8 +9,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "types": ["./types.d.ts"]
+    "types": ["./types.d.ts"],
+    "outDir": "dist"
   },
-  "include": ["**/*.ts", "**/*.d.ts", "vue-internal.js"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

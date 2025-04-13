@@ -145,7 +145,22 @@ const options: MenuOption[] = [
     <Button type="success" icon="image" @click="toggleDarkMode">你好</Button>
     <Button type="warning" icon="image" @click="resetThemeColors">你好</Button>
     <Button type="danger" icon="image" @click="closeAll">你好</Button>
-
+    {{ openValue }}
+    <collapse v-model="openValue">
+      <collapse-item :name="1" title="title111"> content1 </collapse-item
+      ><collapse-item :name="2">
+        <template #title>
+          <div>title2</div>
+        </template>
+        content2
+      </collapse-item>
+      <collapse-item :name="3">
+        <template #title>
+          <div>title3</div>
+        </template>
+        content3
+      </collapse-item>
+    </collapse>
     <!-- 主色选择器 -->
     <ColorPicker theme-type="primary" circle />
     <ColorPicker />
@@ -219,22 +234,7 @@ const options: MenuOption[] = [
       <Button plain type="info">你好</Button>
     </div>
     <a href="">test href</a>
-    {{ openValue }}
-    <collapse v-model="openValue">
-      <collapse-item :name="1" title="title111"> content1 </collapse-item
-      ><collapse-item :name="2">
-        <template #title>
-          <div>title2</div>
-        </template>
-        content2
-      </collapse-item>
-      <collapse-item :name="3">
-        <template #title>
-          <div>title3</div>
-        </template>
-        content3
-      </collapse-item>
-    </collapse>
+
     <!-- <TheWelcome /> -->
   </main>
 </template>

@@ -1,6 +1,7 @@
 import pluginVue from 'eslint-plugin-vue'
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import type { FlatConfig } from '@typescript-eslint/utils/dist/ts-eslint/Config.js'
 // @ts-ignore
 import { config as baseConfig } from './base.js'
 
@@ -9,32 +10,25 @@ import { config as baseConfig } from './base.js'
 // configureVueProject({ scriptLangs: ['ts', 'tsx'] })
 // More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
 
-export default defineConfigWithVueTs(
-  // ...baseConfig,
+const config: FlatConfig.Config[] = defineConfigWithVueTs(
+  ...baseConfig,
   {
     name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue,css}'],
+    files: ['​**​/*.{ts,mts,tsx,vue,css}'],
   },
-
   {
     name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**', '**/node_modules/**'],
+    ignores: ['​**​/dist/​**​', '​**​/dist-ssr/​**​', '​**​/coverage/​**​', '​**​/node_modules/​**​'],
   },
-
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
   skipFormatting,
   {
     name: 'app/custom-rules',
     rules: {
-      'vue/no-unused-components': 'error',
-      'vue/block-lang': 'warn',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'vue/multi-word-component-names': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_+$' }],
-      '@typescript-eslint/no-require-imports': 'off',
-      'no-multiple-empty-lines': ['warn', { max: 2 }],
-      '@typescript-eslint/no-explicit-any': 'off',
+      // ...你的规则
     },
-  },
+  }
 )
+
+export default config
