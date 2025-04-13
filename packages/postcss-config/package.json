@@ -1,0 +1,25 @@
+{
+  "name": "@repo/postcss-config",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
+    "postcss-html": "^1.8.0",
+    "postcss-lit": "^1.2.0",
+    "postcss-nested": "^7.0.2",
+    "postcss-syntax": "^0.36.2",
+    "autoprefixer": "^10.4.21"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@ptpchips/vite-plugin-vitepress-auto-sidebar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Vite plugin for automatically generating Vitepress sidebar configurations",
+  "main": "./dist/index.js",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vite",
+    "vitepress",
+    "sidebar",
+    "plugin"
+  ],
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0",
+    "vitepress": "^1.0.0"
+  }
+}

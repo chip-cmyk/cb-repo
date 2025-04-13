@@ -1,0 +1,35 @@
+carbon-ui
+├── README.md
+├── dirTree.txt
+├── docs
+│   ├── Button.md
+│   ├── api-examples.md
+│   ├── components
+│   ├── demo
+│   ├── guides
+│   ├── index.md
+│   ├── markdown-examples.md
+│   ├── plugins
+│   └── utils
+├── env.d.ts
+├── eslint.config.ts
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── src
+│   ├── App.vue
+│   ├── assets
+│   ├── components
+│   ├── hooks
+│   ├── index.ts
+│   ├── main.ts
+│   ├── styles
+│   └── utils
+├── tsconfig.app.json
+├── tsconfig.build.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── vite.es.config.ts
+└── vite.umd.config.ts
