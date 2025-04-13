@@ -1,7 +1,7 @@
 ### 安装
 
 ```bash
-npm i @ptpchips/carbon-ui -D
+npm i @ptpchips/carbon-ui
 ```
 
 ### 开始使用

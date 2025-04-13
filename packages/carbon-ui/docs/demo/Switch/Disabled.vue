@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { Switch } from '@ptpchips/carbon-ui'
+import { CbSwitch as Switch } from '@ptpchips/carbon-ui'
 const test = ref(false)
 const test2 = ref(false)
 </script>

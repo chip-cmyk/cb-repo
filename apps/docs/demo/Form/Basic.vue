@@ -2,11 +2,11 @@
 import { reactive, ref } from 'vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { Form } from '@ptpchips/carbon-ui'
-import { FormItem } from '@ptpchips/carbon-ui'
-import { Input } from '@ptpchips/carbon-ui'
-import { Button } from '@ptpchips/carbon-ui'
-import { Select } from '@ptpchips/carbon-ui'
+import { CbForm as Form } from '@ptpchips/carbon-ui'
+import { CbFormItem as FormItem } from '@ptpchips/carbon-ui'
+import { CbInput as Input } from '@ptpchips/carbon-ui'
+import { CbButton as Button } from '@ptpchips/carbon-ui'
+import { CbSelect as Select } from '@ptpchips/carbon-ui'
 
 const formRef = ref()
 const model = reactive({

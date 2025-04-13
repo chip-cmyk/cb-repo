@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { Select } from '@ptpchips/carbon-ui'
+import { CbSelect as Select } from '@ptpchips/carbon-ui'
 const test = ref('')
 const states = [
   'Alabama',

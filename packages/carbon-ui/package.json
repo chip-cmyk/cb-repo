@@ -20,7 +20,6 @@
     }
   },
   "module": "./dist/es/carbon-ui.es.js",
-  "main": "./dist/umd/carbon-ui.umd.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite --port 9093",

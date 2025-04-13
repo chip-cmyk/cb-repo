@@ -1,6 +1,6 @@
 <script setup>
-import { Button } from '@ptpchips/carbon-ui'
-import { Icon } from '@ptpchips/carbon-ui'
+import { CbButton as Button } from '@ptpchips/carbon-ui'
+import { CbIcon as Icon } from '@ptpchips/carbon-ui'
 </script>
 <template>
   <div class="button-box">

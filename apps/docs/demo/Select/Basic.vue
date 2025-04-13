@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { Select } from '@ptpchips/carbon-ui'
+import { CbSelect as Select } from '@ptpchips/carbon-ui'
 const test = ref('1')
 const options2 = [
   { label: 'hello', value: '1' },

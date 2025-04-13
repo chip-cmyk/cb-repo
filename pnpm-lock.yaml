@@ -33,6 +33,9 @@ importers:
       '@ptpchips/carbon-ui':
         specifier: workspace:*
         version: link:../../packages/carbon-ui
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
       '@repo/postcss-config':
         specifier: workspace:*
         version: link:../../packages/postcss-config
@@ -48,6 +51,9 @@ importers:
       '@vitepress-demo-preview/plugin':
         specifier: ^1.4.0
         version: 1.4.0(markdown-it-container@3.0.0)(vitepress@1.6.3(@algolia/client-search@5.23.3)(@types/node@22.14.0)(async-validator@4.2.5)(lightningcss@1.29.3)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.2))(vue@3.5.13(typescript@5.8.2))
+      eslint:
+        specifier: ^9.24.0
+        version: 9.24.0(jiti@2.4.2)
       vite:
         specifier: ^6.2.1
         version: 6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(yaml@2.7.1)

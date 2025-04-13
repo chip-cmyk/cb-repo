@@ -1,7 +1,5 @@
 <script setup>
-// import { Button } from '@ptpchips/carbon-ui'
-// import { Icon } from '@ptpchips/carbon-ui'
-import Button from '../../../../packages/carbon-ui/src/components/Button/Button.vue'
+import { CbButton as Button } from '@ptpchips/carbon-ui'
 </script>
 <template>
   <div class="button-box">

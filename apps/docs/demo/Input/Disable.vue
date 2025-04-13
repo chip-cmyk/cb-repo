@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { Input } from '@ptpchips/carbon-ui'
+import { CbInput as Input } from '@ptpchips/carbon-ui'
 const test = ref('some text')
 </script>
 <template>
