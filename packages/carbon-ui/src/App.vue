@@ -18,6 +18,9 @@ import { type MenuOption } from '@/components/Dropdown/types'
 import { createMessage, closeAll } from '@/components/Message/method'
 import Switch from '@/components/Switch/Switch.vue'
 import svgIcon from './assets/icons/apple.svg?raw'
+// import eslintConfig from '@repo/eslint-config/vue-internal'
+
+// console.log(eslintConfig, 'eslintConfig')
 
 // import { currentThemeColors } from '@/index.ts'
 
@@ -189,9 +192,9 @@ const options: MenuOption[] = [
       <div style="width: 15px; height: 15px" class="fa-bounce" v-html="svgIcon"></div>
       <CbButton type="success" icon="image">早上好</CbButton>
       <CbSwitch v-model="test" />
-      <icon type="danger" icon="apple" custom></icon>
-      <icon type="danger" icon="baidu" custom></icon>
-      <icon type="danger" icon="heart"></icon>
+      <icon type="danger" icon="apple" custom bounce></icon>
+      <icon type="success" icon="baidu" custom bounce></icon>
+      <icon type="danger" icon="heart" bounce></icon>
       <icon type="primary" icon="image" bounce color="gold"> <SvgIcon name="baidu"></SvgIcon></icon>
       <icon type="primary" bounce color="salmon"
         ><img src="/src/assets/嵌套图形_stereo-nesting.png" style="width: 15px; height: 15px"
