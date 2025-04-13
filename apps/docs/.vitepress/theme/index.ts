@@ -3,7 +3,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { ElementPlusContainer } from '@vitepress-demo-preview/component'
 import '@vitepress-demo-preview/component/dist/style.css'
-import '@/styles/index.css'
+import '@ptpchips/carbon-ui/dist/style.css'
 import './custom.css'
 
 library.add(fas)

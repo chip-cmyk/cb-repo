@@ -1,0 +1,10 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "dev": {
+      "dependsOn": ["@ptpchips/carbon-ui#build"],
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

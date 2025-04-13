@@ -1,6 +1,7 @@
 <script setup>
-import Button from '@/components/Button/Button.vue'
-import Icon from '@/components/Icon/Icon.vue'
+// import { Button } from '@ptpchips/carbon-ui'
+// import { Icon } from '@ptpchips/carbon-ui'
+import Button from '../../../../packages/carbon-ui/src/components/Button/Button.vue'
 </script>
 <template>
   <div class="button-box">
@@ -28,3 +29,5 @@ import Icon from '@/components/Icon/Icon.vue'
   margin-bottom: 12px;
 }
 </style>
+
+<!-- <template><div>aaaaaaaaaaaaaaa</div></template> -->

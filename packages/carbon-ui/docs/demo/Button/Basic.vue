@@ -1,6 +1,6 @@
 <script setup>
-import Button from '@/components/Button/Button.vue'
-import Icon from '@/components/Icon/Icon.vue'
+import { Button } from '@ptpchips/carbon-ui'
+import { Icon } from '@ptpchips/carbon-ui'
 </script>
 <template>
   <div class="button-box">

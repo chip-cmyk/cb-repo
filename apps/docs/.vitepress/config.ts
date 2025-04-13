@@ -3,6 +3,9 @@ import { fileURLToPath, URL } from 'node:url'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 import autoSidebar from '../plugins/autoSidebar/dist'
 
+console.log(new URL('../../../packages/carbon-ui/src',import.meta.url), 'new URL')
+console.log(import.meta.url, 'import.meta.url')
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Carbon-UI',
@@ -10,7 +13,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('../../src', import.meta.url)),
+       '@': fileURLToPath(new URL('../../../packages/carbon-ui/src',import.meta.url)),
       },
     },
     plugins: [
@@ -51,13 +54,13 @@ export default defineConfig({
 
     // sidebar: [
     //   {
-    //     text: 'Basics',
+    //     text: 'components',
     //     items: [
     //       { text: 'Button', link: '/components/Button' },
-    //       { text: 'Input', link: '/components/Input' },
-    //       { text: 'Switch', link: '/components/Switch' },
-    //       { text: 'Select', link: '/components/Select' },
-    //       { text: 'Form', link: '/components/Form' },
+    //       { text: 'Input', link: '/components/input' },
+    //       { text: 'Switch', link: '/components/switch' },
+    //       { text: 'Select', link: '/components/select' },
+    //       { text: 'Form', link: '/components/form' },
     //     ],
     //   },
     // ],

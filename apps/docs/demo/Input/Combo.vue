@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import Input from '@/components/Input/Input.vue'
-import Icon from '@/components/Icon/Icon.vue'
+import { Input } from '@ptpchips/carbon-ui'
+import { Icon } from '@ptpchips/carbon-ui'
 const test = ref('')
 </script>
 <template>
