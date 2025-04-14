@@ -3,8 +3,8 @@ import { fileURLToPath, URL } from 'node:url'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 import autoSidebar from '../plugins/autoSidebar/dist'
 
-// console.log(new URL('../../../packages/carbon-ui/src',import.meta.url), 'new URL')
-// console.log(import.meta.url, 'import.meta.url')
+console.log(new URL('../../../packages/carbon-ui/src', import.meta.url), 'new URL')
+console.log(import.meta.url, 'import.meta.url')
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,8 +13,11 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-       '@': fileURLToPath(new URL('../../../packages/carbon-ui/src',import.meta.url)),
+        '@': fileURLToPath(new URL('../../../packages/carbon-ui/src', import.meta.url)),
       },
+    },
+    optimizeDeps: {
+      exclude: ['@ptpchips/carbon-ui'],
     },
     plugins: [
       autoSidebar({

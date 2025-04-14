@@ -46,10 +46,10 @@ export default defineConfig({
       fileName: (format) => `carbon-ui.${format}.js`,
     },
     rollupOptions: {
-      onwarn(warning, warn) {
-        if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
-        warn(warning)
-      },
+      // onwarn(warning, warn) {
+      //   if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
+      //   warn(warning)
+      // },
     },
   },
 })

@@ -27,5 +27,3 @@ import { CbButton as Button } from '@ptpchips/carbon-ui'
   margin-bottom: 12px;
 }
 </style>
-
-<!-- <template><div>aaaaaaaaaaaaaaa</div></template> -->
