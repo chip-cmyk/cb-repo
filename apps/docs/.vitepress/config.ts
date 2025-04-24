@@ -2,9 +2,10 @@ import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
 import autoSidebar from '../plugins/autoSidebar/dist'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
-console.log(new URL('../../../packages/carbon-ui/src', import.meta.url), 'new URL')
-console.log(import.meta.url, 'import.meta.url')
+// console.log(new URL('../../../packages/carbon-ui/src', import.meta.url), 'new URL')
+// console.log(import.meta.url, 'import.meta.url')
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,10 +33,22 @@ export default defineConfig({
           {
             title: 'Guides',
             dir: 'guides',
-            collapsed: true,
+            // collapsed: true,
           },
         ],
       }) as any,
+      createSvgIconsPlugin({
+        // Specify the icon folder to be cached
+        // iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+        iconDirs: [fileURLToPath(new URL('../assets/icons', import.meta.url))],
+        // Specify symbolId format
+        symbolId: 'icon-[dir]-[name]',
+        /**
+         * custom dom id
+         * @default: __svg__icons__dom__
+         */
+        customDomId: '__svg__icons__dom__',
+      }),
     ],
   },
   markdown: {

@@ -2,9 +2,13 @@
   "extends": ["//"],
   "tasks": {
     "dev": {
-      "dependsOn": ["@ptpchips/carbon-ui#build"],
       "cache": false,
       "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**", "cache/**"]
     }
   }
 }

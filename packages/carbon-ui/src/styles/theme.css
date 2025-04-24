@@ -1,12 +1,4 @@
 :root {
-  /* 可在此处覆盖主题色 */
-  /* --cb-color-primary: #409eff;
-  --cb-color-success: #67c23a;
-  --cb-color-warning: #e6a23c;
-  --cb-color-danger: #f56c6c;
-  --cb-color-info: #909399; */
-
-  /* 低级浏览器 */
   --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
 
   @each $val, $color in var(--colors) {
