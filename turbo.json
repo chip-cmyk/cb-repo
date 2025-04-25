@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**", "cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "cache/**"],
+      "env": ["TURBO_REMOTE_CACHE_SIGNATURE_KEY"]
     },
     "lint": {
       "dependsOn": ["^lint"]
