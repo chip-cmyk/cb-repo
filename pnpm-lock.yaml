@@ -26,13 +26,13 @@ importers:
       '@fortawesome/free-solid-svg-icons':
         specifier: ^6.7.2
         version: 6.7.2
+      '@ptpchips/carbon-ui':
+        specifier: workspace:*
+        version: link:../../packages/carbon-ui
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
     devDependencies:
-      '@ptpchips/carbon-ui':
-        specifier: workspace:*
-        version: link:../../packages/carbon-ui
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -54,6 +54,9 @@ importers:
       eslint:
         specifier: ^9.21.0
         version: 9.24.0(jiti@2.4.2)
+      postcss:
+        specifier: ^8.5.3
+        version: 8.5.3
       vite:
         specifier: ^6.2.1
         version: 6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(yaml@2.7.1)
