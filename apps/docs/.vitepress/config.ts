@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
-import autoSidebar from '../plugins/autoSidebar/dist'
+import autoSidebar from '../plugins/autoSidebar'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // console.log(new URL('../../../packages/carbon-ui/src', import.meta.url), 'new URL')
