@@ -7,8 +7,8 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", "cache/**"]
+      "inputs": ["$TURBO_DEFAULT$", ".env*", "demo/**", "guides/**", "*.md"],
+      "outputs": [".vitepress/dist/**"]
     }
   }
 }

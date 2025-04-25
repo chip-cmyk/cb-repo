@@ -3,15 +3,17 @@ import { CbButton as Button, CbColorPicker as ColorPicker } from '@ptpchips/carb
 </script>
 <template>
   <div>
-    <div class="theme-picker">普通颜色选择器：<ColorPicker /></div>
-    <div class="theme-picker">
-      主题色颜色选择器：
-      <ColorPicker theme-type="primary" />
-      <ColorPicker theme-type="success" circle />
-      <ColorPicker theme-type="warning" circle />
-      <ColorPicker theme-type="danger" />
-      <ColorPicker theme-type="info" circle />
-    </div>
+    <ClientOnly>
+      <div class="theme-picker">普通颜色选择器：<ColorPicker /></div>
+      <div class="theme-picker">
+        主题色颜色选择器：
+        <ColorPicker theme-type="primary" />
+        <ColorPicker theme-type="success" circle />
+        <ColorPicker theme-type="warning" circle />
+        <ColorPicker theme-type="danger" />
+        <ColorPicker theme-type="info" circle />
+      </div>
+    </ClientOnly>
   </div>
   <div class="button-box">
     <div>

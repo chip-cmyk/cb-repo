@@ -7,9 +7,15 @@ description: 自定义主题色
 
 # 修改主题色
 
-如需修改主题色，请按照以下步骤进行操作。
+修改主题色可通过以下两种方法。
 
-## 配置postcss
+## 方法一：导入工具函数
+
+导入`@ptpchips/carbon-ui`中的工具函数，使用`initializeAllThemeColors`方法初始化主题色，使用`changeThemeColors`方法修改主题色，使用`resetThemeColors`方法重置主题色。
+
+<preview path="../demo/Theme/Basic.vue" title="基础Theme" description="Theme 基础用例"></preview>
+
+## 方法二：配置postcss自定义css变量
 
 安装`postcss`和相关插件。
 

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev --port 9094",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +15,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@ptpchips/carbon-ui": "workspace:*",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@ptpchips/carbon-ui": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/postcss-config": "workspace:*",
     "@tsconfig/node22": "^22.0.0",

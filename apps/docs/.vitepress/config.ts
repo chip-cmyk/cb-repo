@@ -12,6 +12,7 @@ export default defineConfig({
   title: 'Carbon-UI',
   description: 'A UI library based Vue 3',
   vite: {
+    ssr: { noExternal: ['@ptpchips/carbon-ui'] },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('../../../packages/carbon-ui/src', import.meta.url)),
@@ -50,6 +51,9 @@ export default defineConfig({
         customDomId: '__svg__icons__dom__',
       }),
     ],
+    build: {
+      target: 'esnext',
+    },
   },
   markdown: {
     config(md) {

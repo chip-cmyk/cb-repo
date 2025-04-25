@@ -1,42 +1,89 @@
 import { debounce } from 'lodash-es'
 import { type ThemeType } from '@/components/ColorPicker/types'
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
 export type ThemeColors = Partial<Record<ThemeType, string>>
-export const initialThemeColors: Record<ThemeType, string> = {
-  primary:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-primary`).trim() ??
-    '##409eff',
-  success:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-success`).trim() ??
-    '#67c23a',
-  warning:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-warning`).trim() ??
-    '#e6a23c',
-  danger:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-danger`).trim() ??
-    '#f56c6c',
-  info:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-info`).trim() ??
-    '#909399',
-}
 
-export const currentThemeColors = reactive<Record<ThemeType, string>>({
-  primary:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-primary`).trim() ??
-    '##409eff',
-  success:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-success`).trim() ??
-    '#67c23a',
-  warning:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-warning`).trim() ??
-    '#e6a23c',
-  danger:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-danger`).trim() ??
-    '#f56c6c',
-  info:
-    getComputedStyle(document.documentElement).getPropertyValue(`--cb-color-info`).trim() ??
-    '#909399',
+export let initialThemeColors: Record<ThemeType, string> = {
+  primary: '#409eff',
+  success: '#67c23a',
+  warning: '#e6a23c',
+  danger: '#f56c6c',
+  info: '#909399',
+}
+export let currentThemeColors = reactive<Record<ThemeType, string>>({
+  primary: '#409eff',
+  success: '#67c23a',
+  warning: '#e6a23c',
+  danger: '#f56c6c',
+  info: '#909399',
 })
+onMounted(() => {
+  initialThemeColors = {
+    primary:
+      typeof window !== 'undefined'
+        ? (window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue(`--cb-color-primary`)
+            .trim() ?? '#409eff')
+        : '#409eff',
+    success:
+      typeof window !== 'undefined'
+        ? (window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue(`--cb-color-success`)
+            .trim() ?? '#67c23a')
+        : '#67c23a',
+    warning:
+      typeof window !== 'undefined'
+        ? (window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue(`--cb-color-warning`)
+            .trim() ?? '#e6a23c')
+        : '#e6a23c',
+    danger:
+      typeof window !== 'undefined'
+        ? (window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue(`--cb-color-danger`)
+            .trim() ?? '#f56c6c')
+        : '#f56c6c',
+    info:
+      typeof window !== 'undefined'
+        ? (window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue(`--cb-color-info`)
+            .trim() ?? '#909399')
+        : '#909399',
+  }
+  currentThemeColors = {
+    primary:
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue(`--cb-color-primary`)
+        .trim() ?? '##409eff',
+    success:
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue(`--cb-color-success`)
+        .trim() ?? '#67c23a',
+    warning:
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue(`--cb-color-warning`)
+        .trim() ?? '#e6a23c',
+    danger:
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue(`--cb-color-danger`)
+        .trim() ?? '#f56c6c',
+    info:
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue(`--cb-color-info`)
+        .trim() ?? '#909399',
+  }
+})
+
 // 颜色混合计算（带类型校验）
 export const mixColors = (base: string, target: string, ratio: number): string => {
   if (
