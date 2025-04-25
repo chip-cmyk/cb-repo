@@ -26,8 +26,10 @@
     "@vitepress-demo-preview/component": "^2.3.2",
     "@vitepress-demo-preview/plugin": "^1.4.0",
     "eslint": "^9.21.0",
+    "postcss": "^8.5.3",
     "vite": "^6.2.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "^1.6.3"
-  }
+  },
+  "packageManager": "pnpm@10.8.0"
 }
