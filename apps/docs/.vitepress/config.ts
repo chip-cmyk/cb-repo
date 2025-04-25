@@ -26,14 +26,14 @@ export default defineConfig({
         // basePath: '/', // 可选覆盖默认base
         groups: [
           {
-            title: 'Components',
-            dir: 'components',
-            ignoreFiles: ['internal.md'],
-          },
-          {
             title: 'Guides',
             dir: 'guides',
             // collapsed: true,
+          },
+          {
+            title: 'Components',
+            dir: 'components',
+            ignoreFiles: ['internal.md'],
           },
         ],
       }) as any,
@@ -60,10 +60,10 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: '首页', link: '/' },
+      { text: '示例', link: '/components/Button' },
     ],
-    outline: { level: [2, 6] },
+    outline: { level: [2, 4] },
     search: {
       provider: 'local',
     },
@@ -72,7 +72,7 @@ export default defineConfig({
     //   {
     //     text: 'components',
     //     items: [
-    //       { text: 'Button', link: '/components/Button' },
+    //       { text: 'Button', link: '  ' },
     //       { text: 'Input', link: '/components/input' },
     //       { text: 'Switch', link: '/components/switch' },
     //       { text: 'Select', link: '/components/select' },

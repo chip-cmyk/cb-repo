@@ -16,10 +16,6 @@ import baiduSvgUrl from '../../assets/icons/baidu.svg'
     ></icon>
     <icon fade style="width: 18px; height: 18px"><img :src="baiduSvgUrl" /></icon>
     <icon style="width: 18px; height: 18px" bounce>🎉</icon>
-
-    <!-- 结合vite-plugin-svg-icons插件添加custom属性使用自定义图标 -->
-    <icon type="danger" icon="apple" custom beat />
-    <icon type="success" icon="baidu" custom bounce />
   </div>
 </template>
 

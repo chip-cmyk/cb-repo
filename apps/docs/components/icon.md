@@ -48,8 +48,21 @@ export default defineConfig({
 )
 ```
 
+### 使用方法
 
-### Icon Attributes
+在 `main` 入口文件中引入 `vite-plugin-svg-icons` 插件生成的图标文件
+
+```js
+// main.js/ts
+import 'virtual:svg-icons-register'
+```
+
+在 `Icon` 组件中使用 `custom` 属性来启用自定义图标功能。
+
+<preview path="../demo/Icon/Custom.vue" title="结合插件自定义用法" description="Icon 组件的结合插件自定义用法"></preview>
+
+
+## Icon Attributes
 
 | Name        | Description                            | Type                                                             | Default |
 | ----------- | -------------------------------------- | ---------------------------------------------------------------- | ------- |

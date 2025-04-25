@@ -59,6 +59,8 @@ export {
   CbFormItem,
   CbIcon,
   CbMessage,
+  createMessage,
+  closeMessageAll,
   CbInput,
   CbSelect,
   CbSwitch,
