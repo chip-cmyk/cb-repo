@@ -20,12 +20,6 @@ importers:
 
   apps/docs:
     dependencies:
-      '@fortawesome/fontawesome-svg-core':
-        specifier: ^6.7.2
-        version: 6.7.2
-      '@fortawesome/free-solid-svg-icons':
-        specifier: ^6.7.2
-        version: 6.7.2
       '@ptpchips/carbon-ui':
         specifier: workspace:*
         version: link:../../packages/carbon-ui

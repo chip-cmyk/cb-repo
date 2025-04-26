@@ -13,8 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@ptpchips/carbon-ui": "workspace:*",
     "vue": "^3.5.13"
   },

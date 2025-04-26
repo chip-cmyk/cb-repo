@@ -49,6 +49,18 @@ export default defineConfig({
          * @default: __svg__icons__dom__
          */
         customDomId: '__svg__icons__dom__',
+        svgoOptions: {
+          plugins: [
+            {
+              name: 'removeAttrs',
+              params: {
+                attrs: ['fill', 'stroke'],
+              },
+            },
+            'removeDimensions',
+            { name: 'convertColors', params: { currentColor: true } },
+          ],
+        },
       }),
     ],
     build: {
