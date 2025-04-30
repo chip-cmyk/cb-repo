@@ -24,3 +24,17 @@ p {
 .vitepress-demo-preview__element-plus__container > .vitepress-demo-preview-preview {
   padding: 20px;
 }
+
+.VPHero .main .heading .name.clip {
+  background-image: linear-gradient(to left, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text; /* 将渐变应用于文本 */
+  -webkit-text-fill-color: transparent; /* 设置文本颜色为透明 */
+}
+
+.VPHero .main .heading .text {
+  font-size: 36px;
+}
+
+.VPHero .main .VPButton.brand {
+  /* background-image: linear-gradient(to right, #b721ff 0%, #21d4fd 100%); */
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@ptpchips/vite-plugin-vitepress-auto-sidebar",
+  "name": "@ptpchips/vitepress-plugin-auto-sidebar",
   "version": "1.0.0",
   "type": "module",
   "description": "A Vite plugin for automatically generating Vitepress sidebar configurations",

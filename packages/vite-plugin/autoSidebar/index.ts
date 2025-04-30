@@ -43,11 +43,11 @@ export default function autoSidebar(options: AutoSidebarOptions): Plugin {
         // 关键修改：直接使用 group.dir 作为路由路径
         const routePath = path.posix.join(routeBase, group.dir)
 
-        console.log('Processing group:', {
-          group: group.title,
-          fullPath,
-          routePath,
-        })
+        // console.log('Processing group:', {
+        //   group: group.title,
+        //   fullPath,
+        //   routePath,
+        // })
 
         const sidebar = {
           text: group.title,
@@ -58,7 +58,7 @@ export default function autoSidebar(options: AutoSidebarOptions): Plugin {
             ignoreFiles: group.ignoreFiles,
           }),
         }
-        console.log(sidebar)
+        // console.log(sidebar)
         return sidebar
       })
     },
@@ -83,9 +83,9 @@ function generateSidebarItems(options: GenerateOptions) {
       .filter((file) => {
         const isMarkdown = file.endsWith('.md')
         const isIgnored = options.ignoreFiles?.includes(file)
-        if (isIgnored) {
-          console.log(`[autoSidebar] 忽略文件: ${file}`)
-        }
+        // if (isIgnored) {
+        //   // console.log(`[autoSidebar] 忽略文件: ${file}`)
+        // }
         return isMarkdown && !isIgnored
       })
       .map((file) => {
@@ -95,10 +95,10 @@ function generateSidebarItems(options: GenerateOptions) {
 
         const routePath = path.posix.join(options.routePrefix, file.replace('.md', ''))
 
-        console.log('Generated route:', {
-          file,
-          routePath,
-        })
+        // console.log('Generated route:', {
+        //   file,
+        //   routePath,
+        // })
 
         return {
           text: titleMatch?.[1] || formatTitle(file.replace('.md', '')),

@@ -23,8 +23,5 @@
       "persistent": true
     },
     "esl:build": {}
-  },
-  "remoteCache": {
-    "signature": true
   }
 }

@@ -10,11 +10,11 @@ onMounted(() => {
 })
 const changeColors = () => {
   changeThemeColors({
-    primary: '#6332C7',
-    success: '#00A1D6',
+    primary: '#9566F5',
+    success: '#70D9E1',
     warning: '#FF942F',
-    danger: '#E09D8F',
-    info: '#E4E6F1',
+    danger: '#EC70A2',
+    info: '#9AB4C9',
   })
 }
 </script>

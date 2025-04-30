@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { defineComponent, App } from 'vue'
 
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -19,12 +19,18 @@ export * from '@/utils'
 
 import '@/styles/index.css'
 
+// 1. 定义类型
+type InstallableComponent = ReturnType<typeof defineComponent> & {
+  install?: (app: App) => void
+  name: string
+}
+
 config.autoAddCss = false
 config.showMissingIcons = true
 config.styleDefault = 'solid'
 library.add(fas)
 
-const components = [
+const components: InstallableComponent[] = [
   CbButton,
   CbCollapse,
   CbCollapseItem,
@@ -41,6 +47,13 @@ const components = [
   CbSwitch,
   CbTooltip,
 ]
+
+// 按需引入组件：遍历组件数组，给每个组件添加 install 方法
+// components.forEach((component) => {
+//   component.install = (app: App) => {
+//     app.component(component.name!, component)
+//   }
+// })
 
 const install = (app: App) => {
   components.forEach((component) => {

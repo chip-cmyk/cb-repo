@@ -3,7 +3,7 @@ import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
   {
-    files: ['**/*.{ts,mts,tsx,vue,css}'],
+    files: ['**/*.{ts,mts,tsx,vue,css,js}'],
     extends: [baseConfig],
   },
   {

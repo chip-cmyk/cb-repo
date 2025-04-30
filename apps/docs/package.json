@@ -19,6 +19,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/postcss-config": "workspace:*",
+    "@ptpchips/vitepress-plugin-auto-sidebar": "workspace:*",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.9",
     "@vitepress-demo-preview/component": "^2.3.2",

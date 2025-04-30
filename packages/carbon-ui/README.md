@@ -1,3 +1,5 @@
+docs: https://cb-repo-docs.vercel.app
+
 ### Installation
 
 ```bash

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
-import autoSidebar from '../plugins/autoSidebar'
+import autoSidebar from '@ptpchips/vitepress-plugin-auto-sidebar'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // console.log(new URL('../../../packages/carbon-ui/src', import.meta.url), 'new URL')
@@ -9,7 +9,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Carbon-UI',
+  title: 'Carbon UI',
   description: 'A UI library based Vue 3',
   vite: {
     ssr: { noExternal: ['@ptpchips/carbon-ui'] },
