@@ -46,7 +46,12 @@ const isManual = ref(false)
 const tooltipRef = ref<TooltipInstance | null>(null)
 const inputVal = ref('')
 const test = ref(true)
+const testColor = ref('#FF5038')
 
+setTimeout(() => {
+  testColor.value = '#17D56B'
+  console.log(testColor.value, 'testColor')
+}, 2000)
 // 切换暗黑模式
 const toggleDarkMode = () => {
   const html = document.documentElement
@@ -165,7 +170,7 @@ const options: MenuOption[] = [
       </collapse-item>
     </collapse>
     <!-- 主色选择器 -->
-    <ColorPicker theme-type="primary" circle />
+    <ColorPicker theme-type="primary" circle v-model="testColor" />
     <ColorPicker />
     <div>
       <div class="color-block" style="background-color: var(--cb-color-primary)"></div>

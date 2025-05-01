@@ -6,50 +6,52 @@
       borderRadius: props.circle ? '50%' : '6px',
     }"
   >
-    <icon icon="angle-up" class="expand-angle" color="var(--cb-color-white)"></icon>
-    <input
-      ref="_ref"
-      type="color"
-      :value="currentColor"
-      @input="handleColorChange(($event.target as HTMLInputElement).value)"
-      @focus="handleFocus"
-      @blur="isExpanded = false"
-      :style="{
-        borderRadius: props.circle ? '50%' : '4px',
-      }"
-    />
+    <div class="cb-color-picker__angle">
+      <icon icon="angle-up" class="expand-angle" color="var(--cb-color-white)"></icon>
+    </div>
+    <Tooltip trigger="click" :open-delay="0" :close-delay="0">
+      <input
+        type="color"
+        :value="currentColor"
+        @click.prevent="NOOP"
+        @blur="isExpanded = false"
+        @focus="handleFocus"
+        :style="{
+          borderRadius: props.circle ? '50%' : '4px',
+        }"
+      />
+      <template #content>
+        <SketchPicker
+          ref="_ref"
+          v-model="currentColor"
+          @update:modelValue="handleColorChange"
+          @blur="isExpanded = false"
+        />
+      </template>
+    </Tooltip>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, type PropType, onMounted, watch } from 'vue'
-import type { ThemeType } from './types'
-import { themeTypes } from './types'
+import { ref, onMounted, watch, type Component } from 'vue'
 import { debouncedUpdateTheme, currentThemeColors } from '@/utils/colorUtils'
 import Icon from '@/components/Icon/Icon.vue'
-import type { ColorPickerEmits } from './types'
+import type { ColorPickerEmits, ColorPickerProps } from './types'
+import Tooltip from '@/components/Tooltip/Tooltip.vue'
+import { SketchPicker } from 'vue-color'
+import type {} from 'vue-color'
 
 defineOptions({
   name: 'CbColorPicker',
+  components: {
+    SketchPicker: SketchPicker as Component,
+  },
 })
 
-const props = defineProps({
-  modelvalue: {
-    type: String,
-    default: '#409eff',
-  },
-  // 修改为可选 prop
-  themeType: {
-    type: String as PropType<ThemeType | undefined>, // 允许 undefined
-    required: false, // 非必传
-    validator: (val: string | undefined): val is ThemeType =>
-      val ? (themeTypes as readonly string[]).includes(val) : true,
-  },
-  circle: {
-    type: Boolean,
-    default: false,
-  },
-})
+const currentColor = ref('#409eff')
+
+// 从CSS变量初始化当前颜色
+const props = defineProps<ColorPickerProps>()
 
 const emits = defineEmits<ColorPickerEmits>()
 
@@ -57,8 +59,7 @@ const emits = defineEmits<ColorPickerEmits>()
 const _ref = ref<HTMLInputElement | null>(null)
 const isExpanded = ref(false)
 
-// 从CSS变量初始化当前颜色
-const currentColor = ref('#409eff')
+const NOOP = () => {}
 
 // 处理颜色变化
 const handleColorChange = (value: string) => {
@@ -69,6 +70,9 @@ const handleColorChange = (value: string) => {
   currentColor.value = value
   // 始终触发事件
   emits('color-change', value)
+  emits('update:modelValue', value)
+  emits('change', value)
+  emits('input', value)
 }
 
 const handleFocus = () => {
@@ -76,13 +80,15 @@ const handleFocus = () => {
 }
 
 watch(
-  () => props.modelvalue,
+  () => props.modelValue,
   (newVal) => {
-    if (newVal) {
+    if (newVal && newVal !== currentColor.value) {
       currentColor.value = newVal
+      if (props.themeType) {
+        debouncedUpdateTheme(newVal, props.themeType!)
+      }
     }
   },
-  { immediate: true },
 )
 
 if (props.themeType) {
@@ -96,8 +102,8 @@ if (props.themeType) {
 
 onMounted(() => {
   //初始化当前颜色
-  if (props.modelvalue) {
-    currentColor.value = props.modelvalue
+  if (props.modelValue) {
+    currentColor.value = props.modelValue
   } else {
     currentColor.value = _ref.value?.value || '#409eff'
   }

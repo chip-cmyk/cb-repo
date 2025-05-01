@@ -1,20 +1,27 @@
 /* .vitepress/theme/style/blur.css */
 :root.dark {
-  --topBgColor: rgba(0, 0, 0, 0.36);
+  --topBgColor: rgba(0, 0, 0, 0.8);
 }
 :root {
-  --blurSize: 12px;
-  --topBgColor: rgba(255, 255, 255, 0);
+  --blurSize: 8px;
+  --topBgColor: rgba(255, 255, 255, 0.8);
+  --topSearchBgColor: rgba(200, 200, 200, 0.1);
   /* 首页导航 */
   .VPNavBar {
     background-color: var(--topBgColor);
     backdrop-filter: blur(var(--blurSize));
+    -webkit-backdrop-filter: blur(var(--blurSize));
+    box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
   }
 
   /* 文档页导航两侧 */
   .VPNavBar:not(.home) {
     background-color: var(--topBgColor);
     backdrop-filter: blur(var(--blurSize));
+    -webkit-backdrop-filter: blur(var(--blurSize));
+    box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
   }
 
   @media (min-width: 960px) {
@@ -22,26 +29,28 @@
     .VPNavBar:not(.home) {
       background-color: var(--topBgColor);
       backdrop-filter: blur(var(--blurSize));
+      -webkit-backdrop-filter: blur(var(--blurSize));
+      box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
     }
 
     /* 首页下滑后导航两侧 */
     .VPNavBar:not(.has-sidebar):not(.home.top) {
       background-color: var(--topBgColor);
       backdrop-filter: blur(var(--blurSize));
+      -webkit-backdrop-filter: blur(var(--blurSize));
+      box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
     }
   }
 
   @media (min-width: 960px) {
     /* 文档页导航中间 */
     .VPNavBar:not(.home.top) .content-body {
-      background-color: var(--topBgColor);
-      backdrop-filter: blur(var(--blurSize));
     }
 
     /* 首页下滑后导航中间 */
     .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
-      background-color: var(--topBgColor);
-      backdrop-filter: blur(var(--blurSize));
     }
   }
 
@@ -52,27 +61,41 @@
     .VPNavBar:not(.home.top) .divider-line {
       background-color: var(--topBgColor);
       backdrop-filter: blur(var(--blurSize));
+      -webkit-backdrop-filter: blur(var(--blurSize));
+      box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
     }
 
     /* 首页分割线 */
     .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
       background-color: var(--topBgColor);
       backdrop-filter: blur(var(--blurSize));
+      -webkit-backdrop-filter: blur(var(--blurSize));
+      box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+    }
+
+    .VPNavBar .VPNavBarTitle.has-sidebar .title {
+      border: none;
     }
   }
 
   /* 搜索框 VPNavBarSearchButton.vue */
   .DocSearch-Button {
-    background-color: var(--topBgColor);
-    backdrop-filter: blur(var(--blurSize));
+    background-color: var(--topSearchBgColor);
   }
 
   /* 移动端大纲栏 */
   .VPLocalNav {
     background-color: var(--topBgColor);
     backdrop-filter: blur(var(--blurSize));
+    -webkit-backdrop-filter: blur(var(--blurSize));
+    box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.05) 0px 6px 15px 0px;
+
     /* 隐藏分割线 */
     /* border-bottom: 5px solid var(--vp-c-gutter); */
     border-bottom: 0px;
   }
+  backdrop-filter: blur(6px);
 }

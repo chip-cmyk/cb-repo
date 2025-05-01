@@ -7,7 +7,7 @@ hero:
   text: "使用文档"
   tagline: "基于 Vue3 的组件库"
   image:
-    src: /assets/logo2.png
+    src: logo.png
     alt: Carbon UI Logo
     width: 720
     height: 720

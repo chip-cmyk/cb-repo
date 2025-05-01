@@ -46,7 +46,8 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
     "async-validator": "^4.2.5",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue-color": "^3.0.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
