@@ -1,3 +1,5 @@
+@import './blur.css';
+
 :root {
   --vp-c-brand-1: var(--cb-color-primary-dark-1);
   --vp-c-brand-2: var(--cb-color-primary);
@@ -6,6 +8,20 @@
 
   --component-preview-bg: var(--vp-code-block-bg);
   --component-preview-soft: var(--vp-code-block-bg-light);
+
+  /* hero标题渐变色 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+
+  /*hero logo背景渐变色 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    rgb(189, 52, 254, 0.7) 30%,
+    rgb(71, 202, 255, 0.9) 50%
+  );
+  --vp-home-hero-image-filter: blur(80px);
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,16 +41,11 @@ p {
   padding: 20px;
 }
 
-.VPHero .main .heading .name.clip {
-  background-image: linear-gradient(to left, #b721ff 0%, #21d4fd 100%);
-  -webkit-background-clip: text; /* 将渐变应用于文本 */
-  -webkit-text-fill-color: transparent; /* 设置文本颜色为透明 */
-}
-
 .VPHero .main .heading .text {
   font-size: 36px;
 }
 
-.VPHero .main .VPButton.brand {
-  /* background-image: linear-gradient(to right, #b721ff 0%, #21d4fd 100%); */
+.VPHero.has-image.VPHomeHero .image-bg {
+  width: 220px;
+  height: 220px;
 }

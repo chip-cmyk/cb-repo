@@ -5,6 +5,7 @@ import useZIndex from '@/hooks/useZIndex'
 
 let seed = 1
 const instances: MessageContext[] = shallowReactive([])
+const initialZIndex = 2000
 
 export const createMessage = (props: CreateMessageProps) => {
   const id = `message_${seed++}`
@@ -59,7 +60,7 @@ export const getLastBottomOffset = (id: string) => {
 
 export const getLastZIndex = (id: string) => {
   const idx = instances.findIndex((instance) => instance.id === id)
-  if (idx <= 0) return useZIndex().initialZIndex.value
+  if (idx <= 0) return initialZIndex
   const prev = instances[idx - 1]
   return prev.vm.exposed!.zIndex.value
 }
