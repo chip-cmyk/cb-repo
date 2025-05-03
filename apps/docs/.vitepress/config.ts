@@ -21,6 +21,9 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ['@ptpchips/carbon-ui'],
     },
+    css: {
+      devSourcemap: true,
+    },
     plugins: [
       autoSidebar({
         // rootDir: 'docs', // 可选覆盖默认srcDir

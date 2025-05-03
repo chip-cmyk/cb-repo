@@ -1,11 +1,11 @@
 /* .vitepress/theme/style/blur.css */
 :root.dark {
-  --topBgColor: rgba(0, 0, 0, 0.8);
+  --topBgColor: rgba(0, 0, 0, 0.9);
 }
 :root {
-  --blurSize: 8px;
-  --topBgColor: rgba(255, 255, 255, 0.8);
-  --topSearchBgColor: rgba(200, 200, 200, 0.1);
+  --blurSize: 3px;
+  --topBgColor: rgba(255, 255, 255, 0.9);
+  --topSearchBgColor: rgba(200, 200, 200, 0.2);
   /* 首页导航 */
   .VPNavBar {
     background-color: var(--topBgColor);
@@ -47,6 +47,7 @@
   @media (min-width: 960px) {
     /* 文档页导航中间 */
     .VPNavBar:not(.home.top) .content-body {
+      background-color: rgba(255, 255, 255, 0);
     }
 
     /* 首页下滑后导航中间 */

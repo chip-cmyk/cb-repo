@@ -21,12 +21,7 @@
         }"
       />
       <template #content>
-        <SketchPicker
-          ref="_ref"
-          v-model="currentColor"
-          @update:modelValue="handleColorChange"
-          @blur="isExpanded = false"
-        />
+        <SketchPicker ref="_ref" v-model="currentColor" @update:modelValue="handleColorChange" />
       </template>
     </Tooltip>
   </div>

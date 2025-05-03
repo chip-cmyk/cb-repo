@@ -1,7 +1,6 @@
 import { render, h, shallowReactive } from 'vue'
 import type { CreateMessageProps, MessageContext } from './types'
 import MessageConstructor from './Message.vue'
-import useZIndex from '@/hooks/useZIndex'
 
 let seed = 1
 const instances: MessageContext[] = shallowReactive([])
@@ -53,7 +52,7 @@ export const getLastBottomOffset = (id: string) => {
   const idx = instances.findIndex((instance) => instance.id === id)
   if (idx <= 0) return 0
   const prev = instances[idx - 1]
-  //以下方式虽然可以获取到bottomOffset的值,但是依赖 DOM 操作（$el），计算的是 ​布局位置，而非响应式数据。如果 bottomOffset 是计算属性或 ref，这种方式无法同步更新。
+  //以下方式虽然可以获取到bottomOffset的值,但是依赖 DOM 操作（$el），计算的是​布局位置，而非响应式数据。如果 bottomOffset 是计算属性或 ref，这种方式无法同步更新。
   // console.log(prev.vm.proxy!.$el.getBoundingClientRect().bottom,'prev.vm.proxy!.$el.getBoundingClientRect().bottom');
   return prev.vm.exposed!.bottomOffset.value
 }
