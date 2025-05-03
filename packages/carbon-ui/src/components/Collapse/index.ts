@@ -10,5 +10,4 @@ CollapseItem.install = (app: App) => {
 }
 
 export default Collapse
-export { CollapseItem }
-export * from './types'
+export { Collapse, CollapseItem }

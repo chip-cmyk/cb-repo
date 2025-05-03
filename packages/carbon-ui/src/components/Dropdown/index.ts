@@ -6,5 +6,3 @@ Dropdown.install = (app: App) => {
 }
 
 export default Dropdown
-
-export * from './types'

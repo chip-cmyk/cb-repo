@@ -6,5 +6,3 @@ Tooltip.install = (app: App) => {
 }
 
 export default Tooltip
-
-export * from './types'

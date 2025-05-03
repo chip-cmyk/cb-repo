@@ -6,5 +6,3 @@ Input.install = (app: App) => {
 }
 
 export default Input
-
-export * from './types'

@@ -6,5 +6,3 @@ Select.install = (app: App) => {
 }
 
 export default Select
-
-export * from './types'

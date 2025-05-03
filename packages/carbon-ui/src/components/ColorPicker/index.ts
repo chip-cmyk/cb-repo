@@ -5,4 +5,3 @@ ColorPicker.install = (app: App) => {
 }
 
 export default ColorPicker
-export * from './types'

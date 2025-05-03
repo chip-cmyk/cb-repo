@@ -6,5 +6,3 @@ Switch.install = (app: App) => {
 }
 
 export default Switch
-
-export * from './types'

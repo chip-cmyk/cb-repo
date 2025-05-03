@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "import": "./dist/es/carbon-ui.es.js",
-      "require": "./dist/umd/carbon-ui.umd.js"
+      "require": "./dist/umd/carbon-ui.umd.js",
+      "types": "./dist/types/index.d.ts"
     },
     "./dist/": {
       "import": "./dist/",

@@ -8,5 +8,4 @@ FormItem.install = (app: App) => {
   app.component(FormItem.name!, FormItem)
 }
 export default Form
-export { FormItem }
-export * from './types'
+export { Form, FormItem }

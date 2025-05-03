@@ -6,5 +6,3 @@ Icon.install = (app: App) => {
 }
 
 export default Icon
-
-export * from './types'

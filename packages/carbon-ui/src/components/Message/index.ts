@@ -7,4 +7,3 @@ Message.install = (app: App) => {
 
 export default Message
 export { createMessage, closeAll }
-export * from './types'

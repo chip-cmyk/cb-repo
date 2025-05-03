@@ -15,6 +15,18 @@ import CbSelect from '@/components/Select'
 import CbSwitch from '@/components/Switch'
 import CbTooltip from '@/components/Tooltip'
 
+export * from '@/components/Button/types'
+export * from '@/components/Collapse/types'
+export * from '@/components/ColorPicker/types'
+export * from '@/components/Dropdown/types'
+export * from '@/components/Form/types'
+export * from '@/components/Icon/types'
+export * from '@/components/Message/types'
+export * from '@/components/Input/types'
+export * from '@/components/Select/types'
+export * from '@/components/Switch/types'
+export * from '@/components/Tooltip/types'
+
 export * from '@/utils'
 
 import '@/styles/index.css'
