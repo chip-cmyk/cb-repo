@@ -49,3 +49,7 @@ p {
   width: 220px;
   height: 220px;
 }
+
+.VPHomeFeatures .VPFeature {
+  width: 100%;
+}

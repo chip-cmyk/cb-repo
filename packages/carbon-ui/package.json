@@ -15,10 +15,8 @@
       "require": "./dist/umd/carbon-ui.umd.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./dist/": {
-      "import": "./dist/",
-      "require": "./dist/"
-    }
+    "./style.css": "./dist/style.css",
+    "./dist/": "./dist/"
   },
   "module": "./dist/es/carbon-ui.es.js",
   "types": "./dist/types/index.d.ts",
