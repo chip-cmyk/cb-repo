@@ -101,6 +101,6 @@ export default defineConfig({
     // ],
 
     // sidebar: [{ text: 'Basics', items: generateSidebar('/components', '../components') }],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/chip-cmyk/cb-repo' }],
   },
 })
